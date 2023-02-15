@@ -1,0 +1,69 @@
+
+@media only screen and (max-width : 1024px) {    
+    #Title{max-height: 660px;}    
+    #clients img{height: 50px;}
+    .input{  font-size: max(18px, 2em);
+        padding: 0.2em 0.4em;}
+}
+
+
+@media only screen and (max-width : 980px) {
+    h2 {font-size: 1.9em;}
+    h3{font-size: 1.5em}
+    h4{font-size: 1.1em;}
+    #Title{height: 540px;}
+    #contacts{background-size: 500% auto; padding-bottom: 1000px; position: absolute;}
+    #about{padding-top: 10px; background-position: right bottom;}
+    #mymap{display: none;}
+    .myphoto{text-align: center;}
+
+
+    .navbar-header {float: none;}
+    .navbar-left,.navbar-right {float: none !important;}
+    .navbar-toggle {display: block;}
+    .navbar-collapse.collapse {display: none!important;}
+	.navbar-nav>li {
+        float: none;
+        padding-left: 30px;
+        overflow: hidden;
+        font-size: 1.4em;
+    }
+    .navbar-default .navbar-brand {display: block;}
+    hr.separetor2 {display: none!important;}
+    .collapse.in{display:block !important;}
+    .sidenav{width:100%;
+        height: auto;
+        background-color:rgb(27, 26, 26)}
+    .send{padding-top:100px; padding-left:40px;padding-right:40px;}
+    .col-md-8 {position: absolute;}
+    .col-md-4 {position: absolute; margin-left: 40%}
+    #TelephoneSend2{width: 42px; height: 42px;}
+}
+
+
+@media only screen and (max-width : 640px) {
+    .input{  font-size: 12px;}
+    #contacts{height: 220px;}  
+    .TextTest{font-size: 1.4em;}
+    .send{padding-top:250px; padding-left:0px;padding-right:290px;}
+}
+
+@media only screen and (max-width : 480px) {
+    .sidenav{width:100%;
+        height: auto;
+        background-color:rgb(27, 26, 26)}
+    #Title{height: 320px;}
+    #contacts{height: 620px;
+    padding-bottom: 1200px;}      
+    .navbar-default .navbar-brand {display: block;}
+    .footersocial li{font-size: 1.5em}
+    .send{padding-top:310px; padding-left:0px;padding-right:110px;}
+}
+
+@media only screen and (max-width : 320px) {
+    #Title{height: 280px;}
+    .Titlecontent{padding-top: 100px; padding-bottom: 30px;}
+
+}
+
+
