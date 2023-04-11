@@ -1,12 +1,3 @@
-$("html").niceScroll({
-    mousescrollstep: 70,
-    cursorcolor: "#eb7315",
-    zindex: 12,
-    cursorwidth: "5px",
-    cursorborderradius: "10px",
-    cursorborder: "none",
-});
-
 
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("TelephoneSend2");
@@ -15,6 +6,7 @@ var inptuser = document.getElementById("TelephoneUser");
 var inptmsg = document.getElementById("TelephoneMessage");
 var span = document.getElementsByClassName("close")[0];
 var myModal2 = document.getElementById("myModal2");
+var Registration = document.getElementById("Registration");
 var request;
 
   $("html").bind('change keyup input click', function () {
@@ -83,7 +75,15 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == Registration) {
     modal.style.display = "none";
+  }
+}
+span.onclick = function() {
+  Registration.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == Registration) {
+    Registration.style.display = "none";
   }
 }

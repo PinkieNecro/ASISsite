@@ -1,14 +1,19 @@
 body {
     font-family: 'Times New Roman', Serif;
     line-height: 1.8em;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 textarea {
   resize: none;
 }
 .modal-content
 {
-  background: #201b13;
+  background: #3f3e3d;
 }
+.modal-content label {color: #dd8d16};
 
 .bigicon {font-size: 3em;}
 h2{font-size: 42px;}
@@ -56,6 +61,7 @@ hr.separetor3{
   position: absolute;
   margin-left: -35px;
   margin-top: 21px;
+  border-top: 2px solid #ea9312;
   border-left: 10px solid #ea9312;
 }
 
@@ -89,17 +95,6 @@ hr.separetor3{
   border-radius: 4px;
 }
 
-#Title{
-    color: rgb(241, 233, 222);
-    text-align: center;
-    background: url(../img/backgroundStart.png)no-repeat,#0c0704;
-    background-size: 80% auto;
-    padding-bottom: 400px;
-    background-position: center;
-    max-height: 900px;
-    overflow: hidden;
-}
-
 .Menucontent{
     text-align: left;
     padding-top: 100px;
@@ -109,25 +104,28 @@ hr.separetor3{
 #about{
     /*padding-top: 100px;*/
     color: #f1e9de;
-    background: url(../img/backgroundAbout.png)no-repeat,#0c0704;
-    background-size: 70% auto;
+    background: #2b2a2a;
+    background-size: 100% auto;
     background-position: center;
-    padding-bottom: 800px;
     width: 100%;
-    max-height: 1200px;
+    height: 100%;
     overflow: hidden;
 }
 
-#contacts{
-    /*padding-top: 100px;*/
-    color: rgb(241, 233, 222);
-    background: url(../img/backgroundContacts.png)no-repeat,#0c0704;
-    background-size: 100% auto;
-    background-position: center;
-    padding-bottom: 700px;
-    width: 100%;
-    max-height: 1100px;
-    overflow: hidden;
+#shop{
+  /*padding-top: 100px;*/
+  color: #f1e9de;
+  background: #2b2a2a;
+  background-size: 100% auto;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#mymap2
+{
+  display: none;
 }
 
 .TelephoneSend{
@@ -142,75 +140,77 @@ hr.separetor3{
   padding-top: 200px;
 }
 
-.sidenav {
-    height: 100%;
-    width: 180px; 
+.topnav {
+    height: 100px;
+    width: 100%; 
     position: fixed;
     z-index: 10;
     top: 0; 
     right: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  .navbar-default {
-    background-color:rgba(27, 26, 26, 0.082);
-    border-color: #00000000;
-  }
-  .navbar-default .navbar-brand {
-    color: #d7e2e9;
-    display:none;
-  }
-  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #e5dbdb;
-  }
-  .navbar-default .navbar-text {
-    color: #d7e2e9;
-  }
-  .navbar-default .navbar-nav > li > a {
-    color: #caa060;
-  }
-  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #e5dbdb;
-  }
-  .navbar-default .navbar-nav > li > .dropdown-menu {
-    background-color:rgba(27, 26, 26, 0.082);
-    margin-left: auto;
-  }
-  .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
-    color: #d7e2e9;
-  }
-  .navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
-  .navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
-    color: #e5dbdb;
-    background-color: #425766;
-  }
-  .navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
-    background-color:rgba(27, 26, 26, 0.082)
-  }
-  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    color: #e5dbdb;
-    background-color: #425766;
-  }
-  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    color: #e5dbdb;
-    background-color:rgba(27, 26, 26, 0.082)
-  }
-  .navbar-default .navbar-toggle {
-    border-color: #00000000;
-  }
-  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color:rgba(27, 26, 26, 0.082)
-  }
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #d7e2e9;
-  }
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    border-color: #00000000;
-  }
-  .navbar-default .navbar-link {
-    color: #d7e2e9;
-  }
-  .navbar-default .navbar-link:hover {
-    color: #e5dbdb;
-  }
+    padding-left: 10%;
+    padding-top: 10px;
+}
+.navbar-default {
+  background-color:rgba(37, 37, 37, 0.952);
+  border-color: #3a383800;
+}
+.navbar-default .navbar-brand {
+  color: #d7e2e9;
+  display:block;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #e5dbdb;
+}
+.navbar-default .navbar-text {
+  color: #d7e2e9;
+}
+.navbar-default .navbar-nav > li > a {
+  margin-top: 15px;
+  color: #f0e9de;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #696060;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color:rgba(112, 102, 102, 0.925);
+  padding-left: 10px;
+  margin-left: auto;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #d7e2e9;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #e5dbdb;
+  background-color: #425766;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color:rgba(107, 100, 100, 0.082)
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #e5dbdb;
+  background-color: #7a462600;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #e5dbdb;
+  background-color:rgba(27, 26, 26, 0.082)
+}
+.navbar-default .navbar-toggle {
+  border-color: #312d2d00;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color:rgba(73, 69, 69, 0.082)
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #d7e2e9;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #00000000;
+}
+.navbar-default .navbar-link {
+  color: #d7e2e9;
+}
+.navbar-default .navbar-link:hover {
+  color: #e5dbdb;
+}
