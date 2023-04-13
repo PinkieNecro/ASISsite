@@ -11,23 +11,22 @@ require __DIR__ . '/../src/login.php';
         <?= $errors['login'] ?>
     </div>
 <?php endif ?>
-
-    <form action="login.php" method="post">
-        <h1>Войти</h1>
-        <div>
-            <label for="username">Имя Пользователя:</label>
-            <input type="text" name="username" id="username" value="<?= $inputs['username'] ?? '' ?>">
-            <small><?= $errors['username'] ?? '' ?></small>
-        </div>
-        <div>
-            <label for="password">Пароль:</label>
-            <input type="password" name="password" id="password">
-            <small><?= $errors['password'] ?? '' ?></small>
-        </div>
-        <section>
+    <div class="registerform">
+        <form action="login.php" method="post">
+            <h1>Войти</h1>
+            <div>
+                <label for="username">Имя Пользователя:</label>
+                <input type="text" name="username" id="username" class="inputRegistration" value="<?= $inputs['username'] ?? '' ?>">
+                <small><?= $errors['username'] ?? '' ?></small>
+            </div>
+            <div>
+                <label for="password">Пароль:</label>
+                <input type="password" name="password" id="password" class="inputRegistration">
+                <small><?= $errors['password'] ?? '' ?></small>
+            </div>
             <button type="submit">Войти</button>
-            <a href="register.php">Регистрация</a>
-        </section>
-    </form>
+            <footer>Или <a href="register.php">Зарегестрируйтесь</a></footer>
+        </form>
+    </div>
 
 <?php view('footer') ?>

@@ -98,6 +98,18 @@ hr.separetor3{
   border-radius: 4px;
 }
 
+.inputRegistration {
+  font-size: 24px;
+  font-size: max(24px, 1.5em);
+  font-family: inherit;
+  width: 100%;
+  background-color: rgba(100, 100, 100, 0.288);
+  border: 2px solid var(--input-border);
+  border-bottom: 3px solid #ea9312;
+  border-radius: 4px;
+}
+
+
 .Menucontent{
     text-align: left;
     padding-top: 100px;
@@ -112,27 +124,33 @@ hr.separetor3{
     height: auto;
 }
 
-#registerform{
-  /*padding-top: 100px;*/
-  position: fixed;
-  padding: 20%;
-  color: #f1e9de;
-  padding-bottom: 15px;
-  width: auto;
+.registerform{
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   height: auto;
+  background-color: #f1e9de;
 }
 
-#Registration{
-  position: fixed;
-  /*padding-top: 100px;*/
-  color: #f1e9de;
-  width: 100%;
-  height: 100%;
-  background: #2b2a2a94;
-  background-position: center;
-  overflow: hidden;
-  padding-top: 10%;
+.registerform > form{
+padding-top: 10px; 
+padding-left: 40px; 
+padding-bottom: 40px; 
+padding-right: 40px;
 }
+
+.registerform > form> button{
+  background-color: #a56e30; /* Green */
+  border: none;
+  color: white;
+  margin-top: 15px;
+  padding: 12px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
 
 #shop{
   /*padding-top: 100px;*/

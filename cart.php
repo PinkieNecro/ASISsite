@@ -4,5 +4,5 @@
 </style>
 <?php
 require('content/src/header.php');
-require('content/src/companyinfo.php');
+require('content/src/CartContent.php');
 require('content/src/footer.php');
