@@ -1,70 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="АСИС, ASIS, Автоматические системы и сети">
-    <meta name="description" content="Компания «Автоматические системы и сети» создана для повышения эффективности информационно-аналитической и управленческой деятельности любого предприятия. Компания создана в 2017 году, и по сей день автоматизирует деятельность предприятий на базе 1С, оказывала информационную поддержку.">
-
-    <title>ООО АСиС</title>
-
-    <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-
-  
-   </head>
-    <body data-spy="scroll">   
-        <nav class="navbar nabvar-fixed-top topnav navbar-default" role="navigation">
-            <a class="navbar-brand" href="#"><img src="img/ASiSLogo.svg" alt="АСИС"></a></a>
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Раскрыть меню навигации</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>  
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav topnav-centered">                           
-                        <li><a href="#about"></span>О Компании</a></li>
-                        <li><a href="html/Shop.html"></span>Магазин</a></li>
-                    </ul>    
-                </div>
-            </div>
-        </nav>
-        <form action="Registration.php">
-            <div id="Registration" class="modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="container">
-                            <h1>Регистрация</h1>
-                            <p>Пожалуйста, заполните данные, что бы создать аккаунт</p>
-                            <hr>
-                        
-                            <label for="RegistrationUser"><b>Email</b></label>
-                            <input type="text" placeholder="Введите Email" name="RegistrationUser" required>
-                        
-                            <label for="RegistrationPassword"><b>Password</b></label>
-                            <input type="password" placeholder="Введите пароль" name="RegistrationPassword" required>
-                        
-                            <label for="RegistrationPasswordRepeat"><b>Repeat Password</b></label>
-                            <input type="password" placeholder="Повторите пароль" name="RegistrationPasswordRepeat" required>
-                            <hr>
-                        
-                            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-                            <button type="submit" class="registerbtn">Register</button>
-                        </div>
-                    
-                        <div class="container signin">
-                            <p>Already have an account? <a href="#">Sign in</a>.</p>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </form>       
-
         <div id="about" class="container">
             <div class="container Menucontent">        
                 <hr class="separetor3">        
@@ -130,10 +63,4 @@
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abdac6135ec94595696fdc03a654b24d9be2a9edc377efd35b648a5c59de70995&amp;width=80%&amp;height=420px&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
-
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/ASIS.js"></script>
-        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    </body>
-</html>
+        <script src="js/ASISTextForm.js"></script>

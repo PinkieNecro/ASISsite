@@ -6,10 +6,9 @@ var inptuser = document.getElementById("TelephoneUser");
 var inptmsg = document.getElementById("TelephoneMessage");
 var span = document.getElementsByClassName("close")[0];
 var myModal2 = document.getElementById("myModal2");
-var Registration = document.getElementById("Registration");
 var request;
 
-  $("html").bind('change keyup input click', function () {
+  $("php").bind('change keyup input click', function () {
       if (inptvalue.value.match(/[^0-9]/g)) {
           inptvalue.value = inptvalue.value.replace(/[^0-9]/g, '');
       }
@@ -25,7 +24,7 @@ var request;
     var serializedData = $form.serialize();
     $inputs.prop("disabled", true);
     request = $.ajax({
-      url: "telephone.php",
+      url: "php/telephone.php",
       type: "post",
       data: serializedData
     });
@@ -68,6 +67,10 @@ var request;
       }
     });
     request.fail(function (jqXHR){
+      modal.style.display = "block";
+      setTimeout(function() {
+        modal.style.display = "none";
+      }.bind(btn), 2e3);
       myModal2.innerHTML="Произошла ошибка.";
     });
   });
@@ -75,15 +78,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 window.onclick = function(event) {
-  if (event.target == Registration) {
+  if (event.target == modal) {
     modal.style.display = "none";
-  }
-}
-span.onclick = function() {
-  Registration.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == Registration) {
-    Registration.style.display = "none";
   }
 }
