@@ -4,48 +4,68 @@
                 <h2>Магазин</h2>                
                 <h3>Список товаров на продажу:</h3> 
                 <h3>Услуги:</h3>
+                <div class="container">
                 <?php
-                    GetProcuct(1);
-                ?> 
-                <table>
-                    <tr>
-                        <td><?php echo $row['name'] ?></td> 
-                        <td><?php echo $row['description'] ?></td> 
-                        <td><?php echo $row['price'] ?></td> 
-                    </tr>
-                </table>
-                <h3>Сканеры штрихкодов:</h3> 
-                <?php
-                    GetProcuct(2);
-                ?> 
-                <table>
-                    <tr>
-                        <td><?php echo $row['name'] ?></td> 
-                        <td><?php echo $row['description'] ?></td> 
-                        <td><?php echo $row['price'] ?></td> 
-                    </tr>
-                </table>
-                <h3>Принтеры:</h3>
-                <?php
-                    GetProcuct(3);
-                ?>      
-                <table>
-                    <tr>
-                        <td><?php echo $row['name'] ?></td> 
-                        <td><?php echo $row['description'] ?></td> 
-                        <td><?php echo $row['price'] ?></td> 
-                    </tr>
-                </table>     
-                <h3>Фискальные накопители:</h3>
-                <?php
-                    GetProcuct(4);
+                    foreach (GetProcuct(1) as $row){
                 ?>
-                <table>
-                    <tr>
-                        <td><?php echo $row['name'] ?></td> 
-                        <td><?php echo $row['description'] ?></td> 
-                        <td><?php echo $row['price'] ?></td> 
-                    </tr>
-                </table>             
+                    <div class="col-md-3 Productborder"> 
+                        <div class="row">
+                            <h4><?php echo $row['name'] ?></h4> 
+                            <h4><?php echo $row['description'] ?></h4> 
+                            <h4><?php echo $row['cost'] ?>₽</h4> 
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?> 
+                </div>
+                <h3>Сканеры штрихкодов:</h3> 
+                <div class="container">
+                <?php
+                    foreach (GetProcuct(2) as $row){
+                ?> 
+                    <div class="col-md-3 Productborder"> 
+                        <div class="row">
+                            <h4><?php echo $row['name'] ?></h4> 
+                            <h4><?php echo $row['description'] ?></h4> 
+                            <h4><?php echo $row['cost'] ?>₽</h4> 
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?> 
+                </div>
+                <h3>Принтеры:</h3>    
+                <div class="container">
+                <?php
+                    foreach (GetProcuct(3) as $row){
+                ?>  
+                    <div class="col-md-3 Productborder"> 
+                        <div class="row">
+                            <h4><?php echo $row['name'] ?></h4> 
+                            <h4><?php echo $row['description'] ?></h4> 
+                            <h4><?php echo $row['cost'] ?>₽</h4> 
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?> 
+                </div>     
+                <h3>Фискальные накопители:</h3>
+                <div class="container">
+                <?php
+                    foreach (GetProcuct(4) as $row){
+                ?>
+                    <div class="col-md-3 Productborder"> 
+                        <div class="row">
+                            <h4><?php echo $row['name'] ?></h4> 
+                            <h4><?php echo $row['description'] ?></h4> 
+                            <h4><?php echo $row['cost'] ?>₽</h4> 
+                        </div>
+                    </div>
+                <?php
+                    }
+                ?> 
+                </div>             
             </div>
         </div>
