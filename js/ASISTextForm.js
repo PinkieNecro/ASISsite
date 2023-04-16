@@ -1,10 +1,9 @@
-
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("TelephoneSend2");
 var inptvalue = document.getElementById("TelephoneValue");
 var inptuser = document.getElementById("TelephoneUser");
 var inptmsg = document.getElementById("TelephoneMessage");
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close");
 var myModal2 = document.getElementById("myModal2");
 var request;
 
@@ -24,9 +23,9 @@ var request;
     var serializedData = $form.serialize();
     $inputs.prop("disabled", true);
     request = $.ajax({
-      url: "php/telephone.php",
+      url: "/auth/src/libs/TelephoneConnection.php",
       type: "post",
-      data: serializedData
+      data: serializedData,
     });
     request.always(function () {
       $inputs.prop("disabled", false);
@@ -73,6 +72,7 @@ var request;
       }.bind(btn), 2e3);
       myModal2.innerHTML="Произошла ошибка.";
     });
+    event.preventDefault();
   });
 span.onclick = function() {
   modal.style.display = "none";

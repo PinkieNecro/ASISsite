@@ -41,7 +41,7 @@
                                     <label for="TelephoneMessage" >Текст обращения, просим описать проблему в заявке</label>     
                                 </div>
                                 <div class="col-md-4">
-                                    <span class="TextTest send">Отправить <input id="TelephoneSend2" type="image" class="iconify3" src="img\svgsend.svg" width="35" height="35" alt="Submit"></span>
+                                    <span class="TextTest send">Отправить <input id="TelephoneSend2" type="image" class="iconify3" src="img\svgsend.svg" width="35" height="35" alt="submit"></span>
                                 </div>
                             </div>
                             <div id="myModal" class="modal" tabindex="-1" role="dialog">
@@ -63,4 +63,3 @@
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abdac6135ec94595696fdc03a654b24d9be2a9edc377efd35b648a5c59de70995&amp;width=80%&amp;height=420px&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
-        <script src="js/ASISTextForm.js"></script>

@@ -1,16 +1,10 @@
 <?php
-
-require __DIR__ . '/../src/bootstrap.php';
+require __DIR__ . '/../../content/src/header.php';
 require __DIR__ . '/../src/login.php';
 ?>
 
-<?php view('header', ['title' => 'Войти']) ?>
 
-<?php if (isset($errors['login'])) : ?>
-    <div class="alert alert-error">
-        <?= $errors['login'] ?>
-    </div>
-<?php endif ?>
+
     <div class="registerform">
         <form action="login.php" method="post">
             <h1>Войти</h1>
@@ -26,7 +20,11 @@ require __DIR__ . '/../src/login.php';
             </div>
             <button type="submit">Войти</button>
             <footer>Или <a href="register.php">Зарегестрируйтесь</a></footer>
+            <?php if (isset($errors['login'])) : ?>
+            <div class="alert alert-error">
+                <?= $errors['login'] ?>
+            </div>
+            <?php endif ?>
         </form>
     </div>
-
 <?php view('footer') ?>

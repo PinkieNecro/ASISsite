@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
+<?php 
+require __DIR__ . '/../../auth/src/bootstrap.php'; ?>
     <head>
         <meta charset="utf-8">
         <meta name="keywords" content="АСИС, ASIS, Автоматические системы и сети">
@@ -9,7 +11,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/../../css/style.css">
         <link rel="stylesheet" href="/../../css/responsive.css">
-
         <link rel="icon" href="/../../img/icon.png">
 
     </head>
@@ -31,10 +32,14 @@
                             <li><a href="/Shop.php">Магазин</a></li> 
                         </ul>
                     </div>
-                    <div id="SignInButton" class="collapse navbar-collapse navbar-right">
-                        <ul class="nav navbar-nav">                        
-                            <li><a href="/auth/public/register.php">Войти</a></li>
-                        </ul>
-                    </div>
+                    <?php  
+                        if (!is_user_logged_in()) {
+                            include __DIR__ . '/SignedOut.php';
+                        }
+                        else
+                        {
+                            include __DIR__ . '/SignedIn.php';
+                        }
+                    ?>
                 </div>
             </nav>  

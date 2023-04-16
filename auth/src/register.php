@@ -10,18 +10,13 @@ if (is_post_request()) {
         'email' => 'email | required | email | unique: users, email',
         'password' => 'string | required | secure',
         'password2' => 'string | required | same: password',
-        'agree' => 'string | required'
     ];
-
     // custom messages
     $messages = [
         'password2' => [
-            'required' => 'Please enter the password again',
-            'same' => 'The password does not match'
+            'required' => 'Пожалуйста, введите пароль вновь',
+            'same' => 'Пароли не совпадают'
         ],
-        'agree' => [
-            'required' => 'You need to agree to the term of services to register'
-        ]
     ];
 
     [$inputs, $errors] = filter($_POST, $fields, $messages);

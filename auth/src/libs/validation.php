@@ -2,15 +2,15 @@
 
 
 const DEFAULT_VALIDATION_ERRORS = [
-    'required' => 'The %s is required',
-    'email' => 'The %s is not a valid email address',
-    'min' => 'The %s must have at least %s characters',
-    'max' => 'The %s must have at most %s characters',
-    'between' => 'The %s must have between %d and %d characters',
-    'same' => 'The %s must match with %s',
-    'alphanumeric' => 'The %s should have only letters and numbers',
-    'secure' => 'The %s must have between 8 and 64 characters and contain at least one number, one upper case letter, one lower case letter and one special character',
-    'unique' => 'The %s already exists',
+    'required' => 'Необходимо заполнить %s',
+    'email' => '%s не считается подходящим Email',
+    'min' => '%s должно иметь хотя бы %s символов',
+    'max' => '%s должно иметь не более %s символов',
+    'between' => 'Количество символов должно быть между %d и %d',
+    'same' => '%s должно соотноситься с %s',
+    'alphanumeric' => '%s должно содержать только цифры и буквы',
+    'secure' => '%s должно содержать между 8 и 64 символами и иметь хотя бы одну цифру, одну заглавную букву и одну строчную букву',
+    'unique' => '%s уже существует',
 ];
 
 
@@ -191,7 +191,7 @@ function is_secure(array $data, string $field): bool
         return false;
     }
 
-    $pattern = "#.*^(?=.{8,64})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#";
+    $pattern = "#.*^(?=.{8,64})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#";
     return preg_match($pattern, $data[$field]);
 }
 

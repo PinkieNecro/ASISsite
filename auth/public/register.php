@@ -1,9 +1,8 @@
 <?php
-require __DIR__ . '/../src/bootstrap.php';
+require __DIR__ . '/../../content/src/header.php';
 require __DIR__ . '/../src/register.php';
 ?>
 
-<?php view('header', ['title' => 'Регистрация']) ?>
 <div class="registerform">
     <form action="register.php" method="post">
         <h1>Регистрация</h1>
