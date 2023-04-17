@@ -37,7 +37,16 @@ h4{font-size: 18px; line-height: 1.4em;}
 .iconify3{margin-left: 11px; color: #dd8d16}
 ul{padding: 0;}
 a{color: #dd8d16}
-a:hover{color: #c3c3c3; text-decoration: none;}
+a:hover{color: #dd8d16; text-decoration: none;}
+table {width: 100%;}
+th { 
+  padding: 10px; 
+  background-color: #774d17; 
+  color: #fff; 
+  text-align: left; }
+tr{background-color: #e0c99e; color: #16130f}
+td{padding: 7px;}
+
 
 .sectionhead{
     text-align: center;
@@ -146,6 +155,13 @@ hr.separetor3{
   height: auto;
 }
 
+#carttable{
+  /*padding-top: 100px;*/
+  color: #f1e9de;
+  padding-bottom: 15px;
+  width: auto;
+  height: auto;
+}
 .registerform{
   margin-top: 150px;
   margin-left: auto;
@@ -185,6 +201,18 @@ padding-right: 40px;
   display: inline-block;
   font-size: 16px;
   }
+
+  .input3 {
+    background-color: #a18461; /* Green */
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
 
 #shop{
   /*padding-top: 100px;*/

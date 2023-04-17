@@ -57,10 +57,10 @@
     }
     
     .navbar-default .navbar-nav > li {
-        padding: 2px;
+        padding: 1px;
     }
     .navbar-default .navbar-nav > li > a {
-        padding: 2px;
+        padding: 1px;
         font-size: 0.5em;
     }
     

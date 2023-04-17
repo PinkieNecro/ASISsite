@@ -40,7 +40,6 @@ function login(string $username, string $password): bool
         $_SESSION['user_id']  = $user['id'];
         $_SESSION['user_Admin'] = $user['is_admin'];
 
-
         return true;
     }
 
@@ -71,7 +70,7 @@ function find_message_check(string $id)
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
-function check_message(string $id): bool
+function check_message(string $id)
 {   
     if(find_message_check($id)['checked']==0){
         $checked=1;
@@ -122,7 +121,7 @@ function logout(): void
 function current_user()
 {
     if (is_user_logged_in()) {
-        return $_SESSION['username'];
+        return "(".$_SESSION['username'].")";
     }
     return null;
 }

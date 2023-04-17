@@ -11,14 +11,14 @@
 		}else{ 
 			 
 			$sql_s="SELECT * FROM products 
-        WHERE id_product={$id}"; 
+        WHERE id={$id}"; 
 			$query_s=mysql_query($sql_s); 
 			if(mysql_num_rows($query_s)!=0){ 
 				$row_s=mysql_fetch_array($query_s); 
 				 
-				$_SESSION['cart'][$row_s['id_product']]=array( 
+				$_SESSION['cart'][$row_s['id']]=array( 
 						"quantity" => 1, 
-						"price" => $row_s['price'] 
+						"price" => $row_s['cost'] 
 					); 
 				 
 				 
