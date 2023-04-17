@@ -1,5 +1,6 @@
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("TelephoneSend2");
+var btn2 = document.getElementById("adminbutton");
 var inptvalue = document.getElementById("TelephoneValue");
 var inptuser = document.getElementById("TelephoneUser");
 var inptmsg = document.getElementById("TelephoneMessage");

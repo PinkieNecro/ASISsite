@@ -31,7 +31,7 @@ if (is_post_request()) {
     if (register_user($inputs['email'], $inputs['username'], $inputs['password'])) {
         redirect_with_message(
             'login.php',
-            'Your account has been created successfully. Please login here.'
+            'Аккаунт был успешно заведен, осталось зайти.'
         );
 
     }

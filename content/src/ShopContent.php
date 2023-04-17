@@ -2,7 +2,7 @@
             <div class="container Menucontent">        
                 <hr class="separetor3">        
                 <h2>Магазин</h2>                
-                <h3>Список товаров на продажу:</h3> 
+                <h3>Список товаров и услуг на продажу:</h3> 
                 <h3>Услуги:</h3>
                 <div class="container">
                 <?php

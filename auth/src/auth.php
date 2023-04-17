@@ -17,7 +17,7 @@ function register_user(string $email, string $username, string $password, bool $
 
 function find_user_by_username(string $username)
 {
-    $sql = 'SELECT username, password
+    $sql = 'SELECT username, password, is_admin
             FROM users
             WHERE username=:username';
 
@@ -32,15 +32,13 @@ function login(string $username, string $password): bool
 {
     $user = find_user_by_username($username);
 
-    // if user found, check the password
     if ($user && password_verify($password, $user['password'])) {
 
-        // prevent session fixation attack
         session_regenerate_id();
 
-        // set username in the session
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id']  = $user['id'];
+        $_SESSION['user_Admin'] = $user['is_admin'];
 
 
         return true;
@@ -49,9 +47,58 @@ function login(string $username, string $password): bool
     return false;
 }
 
+function find_message($checked)
+{
+    $sql = 'SELECT id, telephone, telephoneUser, telephoneMessage, CurrentDateTelephone, checked FROM dbo.Orders
+            WHERE checked=:checked';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':checked', $checked, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function find_message_check(string $id)
+{
+    $sql = 'SELECT checked FROM dbo.Orders
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function check_message(string $id): bool
+{   
+    if(find_message_check($id)['checked']==0){
+        $checked=1;
+    }
+    else
+    {
+        $checked=0;
+    }
+    $sql = 'UPDATE dbo.Orders
+            SET checked=:checked
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':checked', $checked, PDO::PARAM_STR);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+
+    return $statement->execute();
+}
+
 function is_user_logged_in(): bool
 {
     return isset($_SESSION['username']);
+}
+
+function is_user_admin(): bool
+{
+    return $_SESSION['user_Admin'];
 }
 
 function require_login(): void

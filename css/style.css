@@ -73,6 +73,15 @@ hr.separetor3{
   margin: 10px;
   border: 2px solid #e6d5bd;
 }
+.Messageborder{
+  background: #363942;
+  margin: 6px;
+  border: 2px solid #e6d5bd;
+}
+.MessageborderRead
+{
+  color: #b6b9c2;
+}
 
 .btn-default{
     background: none;
@@ -129,6 +138,14 @@ hr.separetor3{
     height: auto;
 }
 
+#admintable{
+  /*padding-top: 100px;*/
+  color: #f1e9de;
+  padding-bottom: 15px;
+  width: auto;
+  height: auto;
+}
+
 .registerform{
   margin-top: 150px;
   margin-left: auto;
@@ -145,12 +162,24 @@ padding-bottom: 40px;
 padding-right: 40px;
 }
 
-.registerform > form> button{
+.registerform > form> button {
   background-color: #a56e30; /* Green */
   border: none;
   color: white;
   margin-top: 15px;
   padding: 12px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+
+.input2 {
+  background-color: #a18461; /* Green */
+  border: none;
+  color: white;
+  margin-top: 5px;
+  padding: 6px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

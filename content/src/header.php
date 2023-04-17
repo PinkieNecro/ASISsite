@@ -30,6 +30,9 @@ require __DIR__ . '/../../auth/src/bootstrap.php'; ?>
                         <ul class="nav navbar-nav">    
                             <li><a href="/index.php">О Компании</a></li>
                             <li><a href="/Shop.php">Магазин</a></li> 
+                            <?php 
+                                if (is_user_logged_in() && is_user_admin()) {include __DIR__ . '/UserAdmin.php';}
+                            ?>
                         </ul>
                     </div>
                     <?php  

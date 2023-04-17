@@ -38,6 +38,13 @@
     .col-md-8 {position: absolute;}
     .col-md-4 {position: absolute; margin-left: 40%}
     #TelephoneSend2{width: 42px; height: 42px;}
+    .navbar-default .navbar-nav > li {
+        padding: 5px;
+    }
+    .navbar-default .navbar-nav > li > a {
+        padding: 5px;
+        font-size: 0.7em;
+    }
 }
 
 
@@ -54,7 +61,7 @@
     }
     .navbar-default .navbar-nav > li > a {
         padding: 2px;
-        font-size: 0.7em;
+        font-size: 0.5em;
     }
     
 }

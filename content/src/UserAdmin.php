@@ -1,0 +1,1 @@
+                        <li><a href="/admin.php">Админка</a></li>
