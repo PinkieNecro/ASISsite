@@ -35,7 +35,7 @@
                             <h4>Или оставьте заявку и мы свяжемся с Вами</h4>
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input id="TelephoneValue" type="text" name="telephone" class="input" maxlength="16" minlength="11" placeholder="Телефон"><br>
+                                    <input id="IntValue" type="text" name="telephone" class="input" maxlength="16" minlength="11" placeholder="Телефон"><br>
                                     <input id="TelephoneUser" type="text" name="telephoneUser" class="input" placeholder="ФИО владельца"><br>
                                     <textarea id="TelephoneMessage" cols="20" rows="4" type="text" class="input" name="TelephoneMessage" class="input" minlength="1" maxlength="400" required placeholder="Не больше 400 символов"></textarea><br>
                                     <label for="TelephoneMessage" >Текст обращения, просим описать проблему в заявке</label>     

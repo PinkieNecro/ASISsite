@@ -37,7 +37,7 @@ h4{font-size: 18px; line-height: 1.4em;}
 .iconify3{margin-left: 11px; color: #dd8d16}
 ul{padding: 0;}
 a{color: #dd8d16}
-a:hover{color: #dd8d16; text-decoration: none;}
+a:hover{color: #dacfc4; text-decoration: none;}
 table {width: 100%;}
 th { 
   padding: 10px; 
@@ -179,7 +179,7 @@ padding-right: 40px;
 }
 
 .registerform > form> button {
-  background-color: #a56e30; /* Green */
+  background-color: #a56e30;
   border: none;
   color: white;
   margin-top: 15px;
@@ -191,7 +191,7 @@ padding-right: 40px;
   }
 
 .input2 {
-  background-color: #a18461; /* Green */
+  background-color: #a18461; 
   border: none;
   color: white;
   margin-top: 5px;
@@ -202,17 +202,42 @@ padding-right: 40px;
   font-size: 16px;
   }
 
-  .input3 {
-    background-color: #a18461; /* Green */
-    border: none;
-    color: white;
-    width: 100%;
-    padding: 6px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    }
+.input3 {
+  background-color: #a18461;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px;
+  }
+.input4 {
+  background-color: #cc842c; 
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px;
+  }
+.input4:hover{
+  background-color: #cc842c; 
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px;
+  }
 
 #shop{
   /*padding-top: 100px;*/

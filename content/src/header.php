@@ -31,7 +31,7 @@ require __DIR__ . '/../../auth/src/bootstrap.php'; ?>
                             <li><a href="/index.php">О Компании</a></li>
                             <li><a href="/Shop.php">Магазин</a></li> 
                             <?php 
-                                if (is_user_logged_in() && is_user_admin()) {include __DIR__ . '/UserAdmin.php';}
+                                if (is_user_logged_in() && is_user_admin()) { ?><li><a href="/admin.php">Админка</a></li><?php }
                             ?>
                         </ul>
                     </div>

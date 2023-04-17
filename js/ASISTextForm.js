@@ -1,19 +1,18 @@
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("TelephoneSend2");
 var btn2 = document.getElementById("adminbutton");
-var inptvalue = document.getElementById("TelephoneValue");
+var inptvalue = document.getElementById("IntValue");
 var inptuser = document.getElementById("TelephoneUser");
 var inptmsg = document.getElementById("TelephoneMessage");
 var span = document.getElementsByClassName("close");
 var myModal2 = document.getElementById("myModal2");
 var request;
 
-  $("php").bind('change keyup input click', function () {
+  $("html").bind('change keyup input click', function () {
       if (inptvalue.value.match(/[^0-9]/g)) {
-          inptvalue.value = inptvalue.value.replace(/[^0-9]/g, '');
+        inptvalue.value = inptvalue.value.replace(/[^0-9]/g, '');
       }
   });
-
   $("#TelephoneSend").submit(function(event){
     event.preventDefault();
     if (request) {
