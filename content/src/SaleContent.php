@@ -5,13 +5,7 @@
 	}
 	if(isset($_POST['submit'])){ 
 		 
-		foreach($_POST['quantity'] as $key => $val) { 
-			if($val==0 || $val=='') { 
-				unset($_SESSION['cart'][$key]); 
-			}else{ 
-				$_SESSION['cart'][$key]['quantity']=$val; 
-			} 
-		} 
+		redirect_to('/index.php');
 		 
 	} 
 ?>
