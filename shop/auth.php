@@ -51,21 +51,38 @@ function CreateOrder(string $username)
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $date = date('Y-m-d H:i:s');
     $statement->bindValue(':CurrentDateOrder', $date, PDO::PARAM_STR );
+    $statement->execute();
 
-
-    return $statement->execute();
-
-}
-
-function GetOrder(string $username)
-{
-    $sql = 'SELECT * FROM Orders 
-    WHERE id=:id';
-
+    $sql = 'SELECT id FROM Orders 
+    WHERE id=(SELECT MAX(id) FROM Orders)';
     $statement = db()->prepare($sql);
-    $statement->bindValue(':id', $order['id'], PDO::PARAM_STR);
     $statement->execute();
 
     return $statement->fetch(PDO::FETCH_ASSOC);
+}
 
+function FillOrder(string $order_id, string $products, string $count, string $cost)
+{
+    $sql = 'INSERT INTO order_items(order_id, products, count, cost)
+    VALUES(:order_id, :products, :count, :cost)';
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':order_id', $order_id, PDO::PARAM_STR);
+    $statement->bindValue(':products', $products, PDO::PARAM_STR);
+    $statement->bindValue(':count', $count, PDO::PARAM_STR);
+    $statement->bindValue(':cost', $cost, PDO::PARAM_STR);
+
+    return $statement->execute();
+}
+
+function UpdateTotalCostOrder(string $id, string $FullPrice)
+{
+    $sql = 'UPDATE dbo.Orders
+            SET FullPrice=:FullPrice
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':FullPrice', $FullPrice, PDO::PARAM_STR);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+
+    return $statement->execute();
 }

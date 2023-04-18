@@ -4,9 +4,14 @@
 		redirect_to('/index.php');
 	}
 	if(isset($_POST['submit'])){ 
-		CreateOrder($username);
-		$id=GetOrder($_SESSION['user_id']);
-		FillOrder($_SESSION['user_id']);
+		$id=CreateOrder($_SESSION['user_id']);
+		$subtotal=0;
+		foreach (ShowCart() as $row){ 
+			$subtotal=$_SESSION['cart'][$row['id']]['quantity']*$row['cost'];
+			$totalprice+=$subtotal; 
+			FillOrder($id['id'],$row['id'],$_SESSION['cart'][$row['id']]['quantity'],$subtotal);
+		}
+		UpdateTotalCostOrder($id['id'],$totalprice);
 		unset($_SESSION['cart']); 
 		redirect_to('/index.php');
 		 

@@ -7,11 +7,11 @@ require __DIR__ . '/../../auth/src/bootstrap.php'; ?>
         <meta name="keywords" content="АСИС, ASIS, Автоматические системы и сети">
         <meta name="description" content="Компания «Автоматические системы и сети» создана для повышения эффективности информационно-аналитической и управленческой деятельности любого предприятия. Компания создана в 2017 году, и по сей день автоматизирует деятельность предприятий на базе 1С, оказывала информационную поддержку.">
         <title>ООО АСиС</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/../../css/style.css">
         <link rel="stylesheet" href="/../../css/responsive.css">
         <link rel="icon" href="/../../img/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
         <body data-spy="scroll">   
