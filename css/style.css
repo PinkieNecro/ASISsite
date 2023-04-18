@@ -93,6 +93,9 @@ hr.separetor3{
   margin: 6px;
   border: 2px solid #e6d5bd;
 }
+.Messageborder > .row{
+  margin: 4px;
+}
 .MessageborderRead
 {
   color: #b6b9c2;
@@ -140,11 +143,45 @@ hr.separetor3{
   border-radius: 4px;
 }
 
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #312d28;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #0000000e;}
+
+.tabcontent2 {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #00000004;}
 
 .Menucontent{
     text-align: left;
     padding-top: 100px;
-    padding-right: 20%;
+    padding-right: 10%;
 }
 
 #about{

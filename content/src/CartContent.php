@@ -40,7 +40,7 @@
 								$totalprice+=$subtotal; 
 							?> 
 							<tr> 
-								<td><?php echo $row['name'] ?>
+								<td><?php echo $row['name'] ?></td> 
 								<td><input id="IntValue" type="text" name="quantity[<?php echo $row['id'] ?>]" size="5" value="<?php echo $_SESSION['cart'][$row['id']]['quantity'] ?>" /></td> 
 								<td><?php echo $row['cost'] ?>₽</td> 
 								<td><?php echo $_SESSION['cart'][$row['id']]['quantity']*$row['cost'] ?>₽</td> 
@@ -58,7 +58,8 @@
 				<br /> 
 				<h4>Для удаления позиции обнулите ее и обновите корзину.</h4>
 				<button class="input3" type="submit" name="submit">Обновить корзину</button> 
-				<a type="button" class="input4" href="sale.php">Оформить заказ</a>
+				<h4>При изменении количества, не забывайте обновлять корзину.</h4>
+				<a type="button" class="input4" href="sale.php">Оформить заказ.</a>
 				<?php 
 					
 				}else{ 

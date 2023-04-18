@@ -15,6 +15,18 @@ function register_user(string $email, string $username, string $password, bool $
     return $statement->execute();
 }
 
+function find_user_by_id(string $id)
+{
+    $sql = 'SELECT * FROM users
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
 function find_user_by_username(string $username)
 {
     $sql = 'SELECT *
@@ -85,6 +97,38 @@ function check_message(string $id)
 
     $statement = db()->prepare($sql);
     $statement->bindValue(':checked', $checked, PDO::PARAM_STR);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+
+    return $statement->execute();
+}
+
+function find_order_check(string $id)
+{
+    $sql = 'SELECT Done FROM dbo.Orders
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
+}
+
+function check_order(string $id)
+{   
+    if(find_order_check($id)['Done']==0){
+        $Done=1;
+    }
+    else
+    {
+        $Done=0;
+    }
+    $sql = 'UPDATE dbo.Orders
+            SET Done=:Done
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':Done', $Done, PDO::PARAM_STR);
     $statement->bindValue(':id', $id, PDO::PARAM_STR);
 
     return $statement->execute();

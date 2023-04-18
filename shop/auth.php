@@ -1,9 +1,8 @@
 <?php
 
-function GetProcuct(string $type)
+function GetProcuctByType(string $type)
 {
-    $sql = 'SELECT id, name, type, cost, description, img_link
-            FROM products
+    $sql = 'SELECT * FROM products
             WHERE type=:type
             ORDER BY name ASC';
 
@@ -12,6 +11,19 @@ function GetProcuct(string $type)
     $statement->execute();
 
     return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function GetProcuctById(string $id)
+{
+    $sql = 'SELECT * FROM products
+            WHERE id=:id
+            ORDER BY name ASC';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
 function AddCart(string $id)
@@ -85,4 +97,28 @@ function UpdateTotalCostOrder(string $id, string $FullPrice)
     $statement->bindValue(':id', $id, PDO::PARAM_STR);
 
     return $statement->execute();
+}
+
+function FindOrders($done)
+{
+    $sql = 'SELECT * FROM Orders
+            WHERE Done=:Done';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':Done', $done, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function FindItemOrders($order_id)
+{
+    $sql = 'SELECT * FROM order_items
+            WHERE order_id=:order_id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':order_id', $order_id, PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
 }

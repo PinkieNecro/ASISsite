@@ -33,7 +33,7 @@
                 <h3>Услуги:</h3> 
                     <div class="container">
                     <?php
-                        foreach (GetProcuct(1) as $row){
+                        foreach (GetProcuctByType(1) as $row){
                     ?>
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
@@ -51,7 +51,7 @@
                     <h3>Сканеры штрихкодов:</h3> 
                     <div class="container">
                     <?php
-                        foreach (GetProcuct(2) as $row){
+                        foreach (GetProcuctByType(2) as $row){
                     ?> 
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
@@ -69,7 +69,7 @@
                     <h3>Принтеры:</h3>    
                     <div class="container">
                     <?php
-                        foreach (GetProcuct(3) as $row){
+                        foreach (GetProcuctByType(3) as $row){
                     ?>  
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
@@ -87,7 +87,7 @@
                     <h3>Фискальные накопители:</h3>
                     <div class="container">
                     <?php
-                        foreach (GetProcuct(4) as $row){
+                        foreach (GetProcuctByType(4) as $row){
                     ?>
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
