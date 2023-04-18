@@ -2,7 +2,7 @@
 
 function GetProcuct(string $type)
 {
-    $sql = 'SELECT id, name, type, cost, description
+    $sql = 'SELECT id, name, type, cost, description, img_link
             FROM products
             WHERE type=:type
             ORDER BY name ASC';
@@ -40,4 +40,32 @@ function ShowCart()
     $statement->execute();
 
     return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function CreateOrder(string $username)
+{
+    $sql = 'INSERT INTO Orders(username, CurrentDateOrder)
+    VALUES(:username, :CurrentDateOrder)';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':username', $username, PDO::PARAM_STR);
+    $date = date('Y-m-d H:i:s');
+    $statement->bindValue(':CurrentDateOrder', $date, PDO::PARAM_STR );
+
+
+    return $statement->execute();
+
+}
+
+function GetOrder(string $username)
+{
+    $sql = 'SELECT * FROM Orders 
+    WHERE id=:id';
+
+    $statement = db()->prepare($sql);
+    $statement->bindValue(':id', $order['id'], PDO::PARAM_STR);
+    $statement->execute();
+
+    return $statement->fetch(PDO::FETCH_ASSOC);
+
 }

@@ -19,9 +19,11 @@ textarea {
 .modal-content label {color: #dd8d16};
 
 .bigicon {font-size: 3em;}
-h2{font-size: 42px;}
-h3{font-size: 28px;}
-h4{font-size: 18px; line-height: 1.4em;}
+h2{font-size: 42px; color: white;}
+h3{font-size: 28px; color: white;}
+h4{font-size: 18px; line-height: 1.4em; color: white;}
+h5{color: white;}
+h6{color: white;}
 
 .TextTest{
   font-size: 18px; line-height: 1.4em; 
@@ -79,8 +81,12 @@ hr.separetor3{
 
 .Productborder{
   background: #363942;
-  margin: 10px;
+  margin: 5px;
+  text-align: center;
   border: 2px solid #e6d5bd;
+}
+.ProductImage{
+  margin: 15px;
 }
 .Messageborder{
   background: #363942;
@@ -115,6 +121,8 @@ hr.separetor3{
   font-size: max(24px, 1.5em);
   font-family: inherit;
   padding: 0.25em 0.5em;
+  margin: 3px;
+  width: 100%;
   background-color: rgba(100, 100, 100, 0.288);
   border: 2px solid var(--input-border);
   border-bottom: 3px solid #ea9312;

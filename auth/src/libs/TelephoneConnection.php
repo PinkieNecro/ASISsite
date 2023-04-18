@@ -15,7 +15,7 @@ if (!empty($telephone and $TelephoneMessage)){
     $connectionInfo = array( "Database"=>"ASISSite", "UID"=>$serverUser, "PWD"=>$serverPass, "CharacterSet" => "UTF-8");
     $conn = sqlsrv_connect($serverName, $connectionInfo);
     if( $conn ) {
-        $query = "INSERT Into Orders(CurrentDateTelephone,Telephone,TelephoneUser,TelephoneMessage) VALUES (?,?,?,?)";
+        $query = "INSERT Into application(CurrentDateTelephone,Telephone,TelephoneUser,TelephoneMessage) VALUES (?,?,?,?)";
         $params = array($Date,$telephone,$telephoneuser,$TelephoneMessage);
         $stmt = sqlsrv_query($conn,$query,$params);
         }

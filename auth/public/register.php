@@ -38,7 +38,7 @@ require __DIR__ . '/../src/register.php';
 
         <button type="submit">Регистрация</button>
 
-        <footer>Уже зарегестрированы? <a href="login.php">Войти</a></footer>
+        <footer>Уже зарегистрированы? <a href="login.php">Войти</a></footer>
 
     </form>
 </div>

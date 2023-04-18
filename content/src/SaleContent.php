@@ -4,7 +4,10 @@
 		redirect_to('/index.php');
 	}
 	if(isset($_POST['submit'])){ 
-		 
+		CreateOrder($username);
+		$id=GetOrder($_SESSION['user_id']);
+		FillOrder($_SESSION['user_id']);
+		unset($_SESSION['cart']); 
 		redirect_to('/index.php');
 		 
 	} 
@@ -16,6 +19,7 @@
                 <h4>Оформление продажи</h4>
 				<h4>После оформления заказа, вам на Email придет письмо о готовности к выдачи, после чего, вам необходимо будет придти по адресу г. Челябинск, ул Молдавская, д. 17а.</h4>
 				<h4>Заказ оплачивается на месте выдачи.</h4>
+				<h4>В будущем планируется подключить онлайн оплату и доставку СДЭК для иногородних покупателей.</h4>
 				<form method="post" action="sale.php"> 
 				<?php if(isset($_SESSION['cart'])&&($_SESSION['cart'])){ ?>
 				<button class="input3" type="submit" name="submit">Подтверждение оформления</button> 
@@ -23,7 +27,7 @@
 					
 				}else{ 
 					
-					echo "<p>Корзина Пуста</p>"; 
+					echo "<h5>Корзина Пуста</h5>"; 
 					
 				} 
 			

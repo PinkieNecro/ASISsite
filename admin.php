@@ -1,2 +1,2 @@
 <?php
-require('content/src/admin.php');
+require_once('content/src/admin.php');

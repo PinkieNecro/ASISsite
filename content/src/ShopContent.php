@@ -24,6 +24,7 @@
                 <hr class="separetor3">        
                 <h2>Магазин</h2>                
                 <h3>Список товаров и услуг на продажу:</h3> 
+                <?php  if (!is_user_logged_in()) { ?><h3>Корзина доступна только после входа в свою учетную запись.</h3><?php } ?> 
                 <?php 
                     if(isset($message)){ 
                         echo "<h6>$message</h6>"; 
@@ -36,10 +37,11 @@
                     ?>
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
-                                <h4><?php echo $row['name'] ?></h4> 
-                                <h4><?php echo $row['description'] ?></h4> 
-                                <h4><?php echo $row['cost'] ?>₽</h4> 
-                                <a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a>
+                                <image src="<?php echo $row['img_link'] ?>" class="ProductImage" width="90%">
+                                <h5><?php echo $row['name'] ?></h5> 
+                                <h5><?php echo $row['description'] ?></h5> 
+                                <h5><?php echo $row['cost'] ?>₽</h5> 
+                                <?php  if (is_user_logged_in()) { ?><a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a><?php } ?> 
                             </div>
                         </div>
                     <?php
@@ -53,10 +55,11 @@
                     ?> 
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
-                                <h4><?php echo $row['name'] ?></h4> 
-                                <h4><?php echo $row['description'] ?></h4> 
-                                <h4><?php echo $row['cost'] ?>₽</h4> 
-                                <a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a>
+                                <image src="<?php echo $row['img_link'] ?>" class="ProductImage" width="90%">
+                                <h5><?php echo $row['name'] ?></h5> 
+                                <h5><?php echo $row['description'] ?></h5> 
+                                <h5><?php echo $row['cost'] ?>₽</h5> 
+                                <?php  if (is_user_logged_in()) { ?><a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a><?php } ?> 
                             </div>
                         </div>
                     <?php
@@ -70,10 +73,11 @@
                     ?>  
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
-                                <h4><?php echo $row['name'] ?></h4> 
-                                <h4><?php echo $row['description'] ?></h4> 
-                                <h4><?php echo $row['cost'] ?>₽</h4> 
-                                <a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a>
+                                <image src="<?php echo $row['img_link'] ?>" class="ProductImage" width="90%">
+                                <h5><?php echo $row['name'] ?></h5> 
+                                <h5><?php echo $row['description'] ?></h5> 
+                                <h5><?php echo $row['cost'] ?>₽</h5> 
+                                <?php  if (is_user_logged_in()) { ?><a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a><?php } ?> 
                             </div>
                         </div>
                     <?php
@@ -87,10 +91,11 @@
                     ?>
                         <div class="col-md-3 Productborder"> 
                             <div class="row">
-                                <h4><?php echo $row['name'] ?></h4> 
-                                <h4><?php echo $row['description'] ?></h4> 
-                                <h4><?php echo $row['cost'] ?>₽</h4> 
-                                <a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a>
+                                <image src="<?php echo $row['img_link'] ?>" class="ProductImage" width="90%">
+                                <h5><?php echo $row['name'] ?></h5> 
+                                <h5><?php echo $row['description'] ?></h5> 
+                                <h5><?php echo $row['cost'] ?>₽</h5> 
+                                <?php  if (is_user_logged_in()) { ?><a class="input3" href="/Shop.php?&action=add&id=<?php echo $row['id'] ?>">Добавить в корзину</a><?php } ?> 
                             </div>
                         </div>
                     <?php

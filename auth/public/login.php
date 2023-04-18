@@ -19,7 +19,7 @@ require __DIR__ . '/../src/login.php';
                 <small><?= $errors['password'] ?? '' ?></small>
             </div>
             <button type="submit">Войти</button>
-            <footer>Или <a href="register.php">Зарегестрируйтесь</a></footer>
+            <footer>Или <a href="register.php">Зарегистрируйтесь</a></footer>
             <?php if (isset($errors['login'])) : ?>
             <div class="alert alert-error">
                 <?= $errors['login'] ?>

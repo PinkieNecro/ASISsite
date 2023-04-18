@@ -1,2 +1,2 @@
 <?php
-require('content/src/index.php');
+require_once('content/src/index.php');

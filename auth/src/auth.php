@@ -17,7 +17,7 @@ function register_user(string $email, string $username, string $password, bool $
 
 function find_user_by_username(string $username)
 {
-    $sql = 'SELECT username, password, is_admin
+    $sql = 'SELECT *
             FROM users
             WHERE username=:username';
 
@@ -48,7 +48,7 @@ function login(string $username, string $password): bool
 
 function find_message($checked)
 {
-    $sql = 'SELECT id, telephone, telephoneUser, telephoneMessage, CurrentDateTelephone, checked FROM dbo.Orders
+    $sql = 'SELECT id, telephone, telephoneUser, telephoneMessage, CurrentDateTelephone, checked FROM dbo.application
             WHERE checked=:checked';
 
     $statement = db()->prepare($sql);
@@ -60,7 +60,7 @@ function find_message($checked)
 
 function find_message_check(string $id)
 {
-    $sql = 'SELECT checked FROM dbo.Orders
+    $sql = 'SELECT checked FROM dbo.application
             WHERE id=:id';
 
     $statement = db()->prepare($sql);
@@ -79,7 +79,7 @@ function check_message(string $id)
     {
         $checked=0;
     }
-    $sql = 'UPDATE dbo.Orders
+    $sql = 'UPDATE dbo.application
             SET checked=:checked
             WHERE id=:id';
 
