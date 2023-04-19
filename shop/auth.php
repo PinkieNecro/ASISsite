@@ -3,7 +3,7 @@
 function GetProcuctByType(string $type)
 {
     $sql = 'SELECT * FROM products
-            WHERE type=:type
+            WHERE type=:type and archive=0
             ORDER BY name ASC';
 
     $statement = db()->prepare($sql);
