@@ -1,6 +1,6 @@
 <?php 
  
-	if(isset($_GET['action']) && $_GET['action']=="add"){ 
+	if(isset($_GET['action']) && $_GET['action']=="add" && is_user_logged_in()){ 
 		 
 		$id=intval($_GET['id']); 
 		$message="Продукт добавлен в корзину";  
