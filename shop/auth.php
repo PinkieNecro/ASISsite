@@ -58,7 +58,7 @@ function CreateOrder(string $username)
 {
     $sql = 'INSERT INTO Orders(username, CurrentDateOrder)
     VALUES(:username, :CurrentDateOrder)';
-
+    date_default_timezone_set('Asia/Yekaterinburg');
     $statement = db()->prepare($sql);
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $date = date('Y-m-d H:i:s');
